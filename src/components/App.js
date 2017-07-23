@@ -13,7 +13,7 @@ class App extends Component {
    constructor() {
       super();
       this.state = {
-         playListItems: [
+         playlist: [
             {
                username: '',
                artist: '',
@@ -29,11 +29,13 @@ class App extends Component {
          ]
       }
    }
+
+   componentWillMount
   render() {
     return (
       <div className="App">
           <NavBar />
-          <PlayList playListItems= {this.state.playListItems}/>
+          <PlayList playlist= {this.state.playlist}/>
       </div>
     );
   }

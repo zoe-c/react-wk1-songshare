@@ -6,9 +6,9 @@ import PlayListItem from './PlayListItem.js'
 export default class PlayList extends Component {
 
   render() {
-     let playListItems;
-     if(this.props.playListItems){
-       playListItems = this.props.playListItems.map(item => {
+     let listOfItems;
+     if(this.props.playlist){
+       listOfItems = this.props.playlist.map(item => {
           console.log(item)
          return (
             <PlayListItem key={item.title} item={item} />
@@ -18,7 +18,7 @@ export default class PlayList extends Component {
    //   console.log(this.props)
     return (
       <div className="playlist-container">
-         {playListItems}
+         {listOfItems}
       </div>
     )
   }
