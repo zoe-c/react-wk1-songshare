@@ -2,6 +2,19 @@ import React, { Component } from 'react';
 
 
 export default class PlayListForm extends Component {
+   constructor(props) {
+      super(props);
+      this.state = {
+         playlist: [
+            {
+               username: '',
+               artist: '',
+               title: '',
+               notes:''
+            }
+         ]
+      }
+   }
   render() {
     return (
       <div className= "form-container">

@@ -4,10 +4,16 @@ import React, { Component } from 'react';
 import PlayListItem from './PlayListItem.js'
 
 export default class PlayList extends Component {
+   constructor(props) {
+      super(props);
+      this.state = {
+         songs: [],
+      }
+   }
 
   render() {
      let listOfItems;
-     if(this.props.playlist){
+     if(this.props.playlist) {
        listOfItems = this.props.playlist.map(item => {
           console.log(item)
          return (

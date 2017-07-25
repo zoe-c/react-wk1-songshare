@@ -54,7 +54,7 @@ fetchData = (e) => {
 
 addToList = (e) => {
     e.preventDefault();
-    this.setState({userName: e.target.value, songTitle: e.target.value, songArtist: e.target.value, songNotes: e.target.value});
+    this.setState({username: e.target.value, title: e.target.value, artist: e.target.value, notes: e.target.value});
     let listItem = JSON.stringify(this.state);
 
     fetch("https://tiny-lasagna-server.herokuapp.com/collections/playlisting", {
@@ -71,7 +71,7 @@ addToList = (e) => {
   }).catch(err => {
     console.log(err, "boo!");
   });
-  this.setState({userName: '', songNotes: '', songArtist: '', songTitle:''});
+  this.setState({username: '', notes: '', artist: '', title:''});
 }
 
 //******************************************************************************

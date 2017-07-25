@@ -19,18 +19,20 @@ class App extends Component {
                artist: '',
                title: '',
                notes:''
-            },
-            {
-               username: 'finga',
-               artist: 'sample',
-               title: 'sample',
-               notes:'trying this out. delete this later'
             }
          ]
       }
    }
+// NOTE: demo suggests either. lecture suggests DidMount.
+ //  componentWillMount(){
+ //     this.setState({playlist: []})
+ // }
 
-   componentWillMount
+//  componentDidMount(){
+//     fetch()
+//     .then(results => results.json())
+//     .then(responseData =>)
+// }
   render() {
     return (
       <div className="App">
