@@ -4,16 +4,39 @@ import '../styles/PlayListForm.css';
 export default class PlayListForm extends Component {
    constructor(props) {
       super(props);
+      this.handleName = this.handleName.bind(this);
+      this.handleArtist = this.handleArtist.bind(this);
+      this.handleTitle = this.handleTitle.bind(this);
+      this.handleNotes = this.handleNotes.bind(this);
+
       this.state = {
-         playlist: [
-            {
-               username: '',
-               artist: '',
-               title: '',
-               notes:''
-            }
-         ]
+         songs:[],
+         username: '',
+         artist: '',
+         title: '',
+         notes: ''
+         // playlist: [
+         //    {
+         //       username: '',
+         //       artist: '',
+         //       title: '',
+         //       notes:''
+         //    }
+         // ]
       }
+
+   }
+   handleName(event){
+   this.setState({username: event.target.value});
+   }
+   handleArtist(event){
+   this.setState({artist: event.target.value});
+   }
+   handleTitle(event){
+   this.setState({title: event.target.value});
+   }
+   handleNotes(event){
+   this.setState({notes: event.target.value});
    }
 
    addToList = (e) => {
@@ -43,7 +66,7 @@ export default class PlayListForm extends Component {
          <form className="addToPlayList">
             <div>
                <label htmlFor="user">User Name:</label>
-               <input  onChange={this.handleUserName}
+               <input  onChange={this.handleName}
                        type="text"
                        className="form-control"
                        id="user"
