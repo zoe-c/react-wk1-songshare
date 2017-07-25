@@ -33,31 +33,37 @@ export default class PlayList extends Component {
          return results.json();
        })
        .then(data => {
+         console.log(this.state)
          this.setState({songs: data});
        })
        .catch((error) => {
           console.log("Error with Fetching : ", error);
       });
    }
-
   render() {
-     let listOfSongs;
-     if(this.props.songs) {
-       listOfSongs = this.props.songs.map(song => {
-          console.log(song)
-         return (
-            <PlayListItem key={song.title} song={song} />
-         );
-      });
-     }
    //   console.log(this.props)
     return (
       <div className="playListContainer">
          <button type="submit" className="updateButton" onClick={this.fetchData}>
             Update List
          </button>
-         {listOfSongs}
+         <PlayListItem songs={this.state.songs} />
       </div>
     )
   }
 }
+
+
+
+
+
+
+// let listOfSongs;
+// if(this.props.songs) {
+//   listOfSongs = this.props.songs.map(song => {
+//      console.log(song)
+//     return (
+//       <PlayListItem key={song._id} song={song} />
+//     );
+// });
+// }

@@ -13,3 +13,17 @@
    padding: 1em 3em;
    border-radius: 2px;
 }
+
+.songsList {
+   overflow: scroll;
+}
+
+ul {
+   list-style-type: none;
+
+}
+
+.songListItem {
+   width: 400px;
+   height: 400px;
+}
