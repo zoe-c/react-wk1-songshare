@@ -1,0 +1,19 @@
+.formContainer {
+   border: solid black 1px;
+   width: 45vw;
+   height: 75vh;
+   padding: 3em;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+form {
+   border: solid black 1px;
+   border-radius: 4px;
+   display: flex;
+   height: 75%;
+   flex-direction: column;
+   justify-content: space-around;
+   padding: 2em 4em;
+}

@@ -4,7 +4,7 @@ import '../styles/App.css';
 // import components
 import NavBar from './NavBar.js'
 import PlayList from './PlayList.js'
-// import PlayListForm from './PlayListForm.js'
+import PlayListForm from './PlayListForm.js'
 
 // NOTE: uncomment and use elements below when needed
 // <PlayList className="list-item-container" />
@@ -37,7 +37,11 @@ class App extends Component {
     return (
       <div className="App">
           <NavBar />
+          <div className= "contentContainer">
+          <PlayListForm />
           <PlayList playlist= {this.state.playlist}/>
+          </div>
+
       </div>
     );
   }

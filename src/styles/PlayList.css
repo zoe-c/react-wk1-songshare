@@ -1,0 +1,15 @@
+.playListContainer {
+   border: solid black 1px;
+   width: 45vw;
+   height: 75vh;
+   padding: 3em;
+   display: flex;
+   flex-flow: column;
+   /*justify-content: center;*/
+   align-items: center;
+}
+
+.updateButton {
+   padding: 1em 3em;
+   border-radius: 2px;
+}

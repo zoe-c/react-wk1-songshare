@@ -1,5 +1,24 @@
 .App {
    width: 100vw;
-   min-width: 1300px;
+   min-width: 1000px;
    min-height: 100vh;
+   display: flex;
+   flex-flow: wrap column;
+   /*align-items: center;*/
+
+}
+
+.navBar {
+   border: solid black 1px;
+   width: 100vw;
+   min-width: 1000px;
+   height: 10vw;
+   display: block;
+   text-align: center;
+}
+
+.contentContainer {
+   width: 100vw;
+   min-width: 1000px;
+   display: flex;
 }
