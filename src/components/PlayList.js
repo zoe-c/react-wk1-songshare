@@ -11,20 +11,51 @@ export default class PlayList extends Component {
       }
    }
 
+   componentDidMount() {
+      fetch('https://tiny-lasagna-server.herokuapp.com/collections/playlisting')
+      .then(results => {
+            return results.json();
+          })
+      .then(data => {
+            this.setState({songs: data});
+            console.log("state", this.state.songs);
+          })
+      .catch((error) => {
+          console.log("Error with Fetching : ", error);
+       });
+   }
+
+   fetchData = (e) => {
+       e.preventDefault();
+       fetch('https://tiny-lasagna-server.herokuapp.com/collections/playlisting')
+       .then(results => {
+         return results.json();
+       })
+       .then(data => {
+         this.setState({songs: data});
+       })
+       .catch((error) => {
+          console.log("Error with Fetching : ", error);
+      });
+   }
+
   render() {
-     let listOfItems;
-     if(this.props.playlist) {
-       listOfItems = this.props.playlist.map(item => {
-          console.log(item)
+     let listOfSongs;
+     if(this.props.songs) {
+       listOfSongs = this.props.songs.map(song => {
+          console.log(song)
          return (
-            <PlayListItem key={item.title} item={item} />
+            <PlayListItem key={song.title} song={song} />
          );
       });
      }
    //   console.log(this.props)
     return (
-      <div className="playlist-container">
-         {listOfItems}
+      <div className="playlistContainer">
+         <button type="submit" className="updateButton" onClick={this.fetchData}>
+            Update List
+         </button>
+         {listOfSongs}
       </div>
     )
   }

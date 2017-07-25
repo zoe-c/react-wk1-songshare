@@ -8,10 +8,11 @@ import React, { Component } from 'react';
 export default class PlayListItem extends Component {
   render() {
     return (
-      <ul className="item">
-         <li>{this.props.item.username}</li>
-         <li>{this.props.item.title}</li>
-         <li>{this.props.item.artist}</li>
+      <ul className="songs">
+         <li>Username: {this.props.song.username}</li>
+         <li>Artist/Band: {this.props.song.artist}</li>
+         <li>Title: {this.props.song.title}</li>
+         <li>Notes: {this.props.song.notes}</li>
       </ul>
     )
   }
