@@ -18,7 +18,7 @@ export default class PlayListForm extends Component {
          artist: '',
          title: '',
          notes: ''
-         
+
       }
 
    }
@@ -59,46 +59,45 @@ export default class PlayListForm extends Component {
   render() {
     return (
       <div className= "formContainer">
-         <form className="addToPlayList">
-            <div>
-               <label htmlFor="user">User Name:</label>
+         <form>
+            <div className="fieldsetDivs">
+               <label className= "formLabels" htmlFor="user">user name:</label>
                <input  onChange={this.handleName}
                        type="text"
                        className="form-control"
                        id="user"
-                       placeholder="Name or User Name"
+                       placeholder=""
                        value={this.state.username}/>
             </div>
-            <div>
-               <label htmlFor="artist">Artist/Band:</label>
+            <div className="fieldsetDivs">
+               <label className= "formLabels" htmlFor="artist">artist/band:</label>
                <input  onChange={this.handleArtist}
                        type="text"
                        className="form-control"
                        id="artist"
-                       placeholder="Name or User Name"
+                       placeholder=""
                        value={this.state.artist}/>
             </div>
-            <div>
-               <label htmlFor="title">Song Title:</label>
+            <div className="fieldsetDivs">
+               <label className="formLabels" htmlFor="title">song title:</label>
                <input  onChange={this.handleTitle}
                        type="text"
                        className="form-control"
                        id="title"
-                       placeholder="Name or User Name"
+                       placeholder=""
                        value={this.state.title}/>
             </div>
-            <div>
-               <label htmlFor="notes">Notes about Song:</label>
+            <div className="fieldsetDivs">
+               <label className="formLabels" htmlFor="notes">notes about song:</label>
                <input  onChange={this.handleNotes}
                        type="text"
                        className="form-control"
                        id="notes"
-                       placeholder="Name or User Name"
+                       placeholder=""
                        value={this.state.notes}/>
             </div>
-            <div>
-               <input className="infoSubButton" type="submit" value="Submit" onClick={this.addToList} />
-            </div>
+            <input id="infoSubButton" type="submit" value="submit" onClick={this.addToList} />
+
          </form>
       </div>
 

@@ -47,26 +47,11 @@ export default class PlayList extends Component {
    //   console.log(this.props)
     return (
       <div className="playListContainer">
-         <button type="submit" id="updateButton" onClick={this.fetchData}>
-            Update List
+         <button type="submit" id="updateButton"  onClick={this.fetchData}>
+            update
          </button>
          <PlayListItem songs={this.state.songs} />
       </div>
     )
   }
 }
-
-
-
-
-
-
-// let listOfSongs;
-// if(this.props.songs) {
-//   listOfSongs = this.props.songs.map(song => {
-//      console.log(song)
-//     return (
-//       <PlayListItem key={song._id} song={song} />
-//     );
-// });
-// }

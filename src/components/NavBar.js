@@ -5,7 +5,7 @@ export default class NavBar extends Component {
   render() {
     return (
       <nav className="navBar">
-         NAV BAR LINKS
+         song share
       </nav>
     )
   }
