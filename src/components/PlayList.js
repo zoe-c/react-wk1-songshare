@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import '../styles/PlayList.css';
+
+// import styles (*use app.css, then drag over to sep stylesheet)
+// import '../styles/PlayList.css';
+import '../styles/App.css';
 
 // import child component
 import PlayListItem from './PlayListItem.js'
@@ -44,7 +47,7 @@ export default class PlayList extends Component {
    //   console.log(this.props)
     return (
       <div className="playListContainer">
-         <button type="submit" className="updateButton" onClick={this.fetchData}>
+         <button type="submit" id="updateButton" onClick={this.fetchData}>
             Update List
          </button>
          <PlayListItem songs={this.state.songs} />

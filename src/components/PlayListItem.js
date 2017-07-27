@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 
+// import styles
+import '../styles/App.css';
+
 // import parent component
 // may not need.
-// import PlayList from './PlayList.js'
+// import PlayList from '../styles/PlayList.css'
 
 export default class PlayListItem extends Component {
    constructor(props) {
@@ -11,22 +14,25 @@ export default class PlayListItem extends Component {
    render() {
     let listOfSongs = this.props.songs.map((song, _id) => {
       return (
-        <li key={_id} className="songsListItem">
+        <li key={_id} className="PlayListItem">
           <div className="songData">
-            <h4 className="name">Username: {song.username}</h4>
-            <h5 className="gender">Artist/Band: {song.artist}</h5>
-            <h5 className="eyes">Title: {song.title}</h5>
-            <h5>Notes: {song.notes}</h5>
+            <h3 className="label">Username:</h3>
+               <h5>{song.username}</h5>
+            <h3 className="label">Artist/Band:</h3>
+               <h5>{song.artist}</h5>
+            <h3 className="label">Title:</h3>
+               <h5>{song.title}</h5>
+            <h3 className="label">Notes:</h3>
+               <h5>{song.notes}</h5>
           </div>
         </li>
       )
     })
     return (
-      <div className="songsList">
-        <ul className="songUl">
+        <ul id="ItemList">
           {listOfSongs}
         </ul>
-      </div>
+
     )
   }
 }

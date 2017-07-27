@@ -18,7 +18,66 @@
 }
 
 .contentContainer {
+   border: solid blue 2px;
    width: 100vw;
    min-width: 1000px;
+   height: 90vh;
    display: flex;
+   flex-direction: row;
+   justfy-content: space-between;
+}
+
+/*PlayListStyle >> PlayList.css---------------------*/
+.playListContainer {
+   border: solid black 1px;
+   width: 50%;
+   min-width: 500px;
+   height: 75vh;
+   padding: 2em;
+   display: flex;
+   flex-flow: column;
+   /*justify-content: center;*/
+   align-items: center;
+}
+
+#updateButton {
+   padding: 20px 40px;
+   margin-bottom: 2em;
+   border: solid black 1px;
+   border-radius: 2px;
+}
+
+#ItemList {
+   border: solid red 1px;
+   list-style-type: none;
+   overflow: scroll;
+}
+
+.PlayListItem {
+
+}
+
+
+
+/*PlayListFormStyles >> PlayListForm.css-------------*/
+
+.formContainer {
+   border: solid black 1px;
+   width: 50%;
+   min-width: 500px;
+   height: 75vh;
+   padding: 3em;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+form {
+   border: solid black 1px;
+   border-radius: 4px;
+   display: flex;
+   height: 75%;
+   flex-direction: column;
+   justify-content: space-around;
+   padding: 2em 4em;
 }

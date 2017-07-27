@@ -37,9 +37,9 @@ class App extends Component {
     return (
       <div className="App">
           <NavBar />
-          <div className= "contentContainer">
-          <PlayListForm />
-          <PlayList playlist= {this.state.playlist}/>
+          <div className="contentContainer">
+             <PlayListForm />
+             <PlayList playlist={this.state.playlist}/>
           </div>
 
       </div>

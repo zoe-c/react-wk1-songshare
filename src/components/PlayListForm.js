@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import '../styles/PlayListForm.css';
+
+// import styles (*use app.css, then drag over to sep stylesheet)
+// import '../styles/PlayListForm.css';
+import '../styles/App.css';
 
 export default class PlayListForm extends Component {
    constructor(props) {
@@ -15,14 +18,7 @@ export default class PlayListForm extends Component {
          artist: '',
          title: '',
          notes: ''
-         // playlist: [
-         //    {
-         //       username: '',
-         //       artist: '',
-         //       title: '',
-         //       notes:''
-         //    }
-         // ]
+         
       }
 
    }
