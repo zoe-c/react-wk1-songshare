@@ -14,30 +14,30 @@ export default class PlayListForm extends Component {
 
       this.state = {
          songs:[],
-         username: '',
-         artist: '',
-         title: '',
-         notes: ''
+         userName: '',
+         songArtist: '',
+         songTitle: '',
+         songNotes: ''
 
       }
 
    }
    handleName(event){
-   this.setState({username: event.target.value});
+   this.setState({userName: event.target.value});
    }
    handleArtist(event){
-   this.setState({artist: event.target.value});
+   this.setState({songArtist: event.target.value});
    }
    handleTitle(event){
-   this.setState({title: event.target.value});
+   this.setState({songTitle: event.target.value});
    }
    handleNotes(event){
-   this.setState({notes: event.target.value});
+   this.setState({songNotes: event.target.value});
    }
 
    addToList = (e) => {
        e.preventDefault();
-       this.setState({username: e.target.value, title: e.target.value, artist: e.target.value, notes: e.target.value});
+       this.setState({userName: e.target.value, songTitle: e.target.value, songArtist: e.target.value, songNotes: e.target.value});
        let listItem = JSON.stringify(this.state);
 
       fetch("https://tiny-lasagna-server.herokuapp.com/collections/playlisting", {
@@ -53,7 +53,7 @@ export default class PlayListForm extends Component {
      }).catch(err => {
        console.log(err, "boo!");
      });
-     this.setState({username: '', notes: '', artist: '', title:''});
+     this.setState({userName: '', songNotes: '', songArtist: '', songTitle:''});
    }
 
   render() {
@@ -67,7 +67,7 @@ export default class PlayListForm extends Component {
                        className="form-control"
                        id="user"
                        placeholder=""
-                       value={this.state.username}/>
+                       value={this.state.userName}/>
             </div>
             <div className="fieldsetDivs">
                <label className= "formLabels" htmlFor="artist">artist/band:</label>
@@ -76,7 +76,7 @@ export default class PlayListForm extends Component {
                        className="form-control"
                        id="artist"
                        placeholder=""
-                       value={this.state.artist}/>
+                       value={this.state.songArtist}/>
             </div>
             <div className="fieldsetDivs">
                <label className="formLabels" htmlFor="title">song title:</label>
@@ -85,7 +85,7 @@ export default class PlayListForm extends Component {
                        className="form-control"
                        id="title"
                        placeholder=""
-                       value={this.state.title}/>
+                       value={this.state.songTitle}/>
             </div>
             <div className="fieldsetDivs">
                <label className="formLabels" htmlFor="notes">notes about song:</label>
@@ -94,7 +94,7 @@ export default class PlayListForm extends Component {
                        className="form-control"
                        id="notes"
                        placeholder=""
-                       value={this.state.notes}/>
+                       value={this.state.songNotes}/>
             </div>
             <input id="infoSubButton" type="submit" value="submit" onClick={this.addToList} />
 

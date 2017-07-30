@@ -13,17 +13,28 @@
 }
 
 .navBar {
-   position: relative;
-   top: 0;
    width: 100vw;
    min-width: inherit;
    height: 120px;
-   text-align: center;
-   font-size: 70px;
-   color: #5D5D5D;
+   position: relative;
+   top: 0;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
    background-color: #D5E5D8;
-   border-bottom-right-radius: 5px;
-   border-bottom-left-radius: 5px;
+   border-bottom-right-radius: 8px;
+   border-bottom-left-radius: 8px;
+   box-shadow: 4px 5px 0 -3px rgba(0,0,0,.3);
+}
+
+.navText {
+   margin: 0;
+   padding: 0;
+   padding-left: 25px;
+   line-height: .6;
+   font-family:'Bungee', sans-serif;
+   font-size: 115px;
+   color: white;
 }
 
 .contentContainer {
@@ -35,6 +46,7 @@
    padding: 5vh 5vw;
    border-radius: 5px;
    background-color: #F6F4F3;
+   box-shadow: 3px 3px 0 -1px rgba(0,0,0,.2);
 }
 
 /*PlayListStyle >> PlayList.css---------------------*/
@@ -48,15 +60,17 @@
    justify-content: center;
    background-color: #EAE0D7;
    border-radius: 5px;
+   /*box-shadow: 3px 3px 0 -1px rgba(0,0,0,.2);*/
 }
 
 #updateButton {
+   font-family:'Bungee', sans-serif;
    width: 90%;
    height: 75px;
    margin-bottom: 1em;
-   display: flex;
+   /*display: flex;
    justify-content: center;
-   align-items: center;
+   align-items: center;*/
    font-size: 24px;
    font-weight: bold;
    background-color: #F6F4F3;
@@ -69,10 +83,10 @@
 #ItemList {
    width: 90%;
    height: 500px;
-   border : solid 5px rgba(0,0,0,.1);
+   background-color: rgba(0,0,0,.1);
    border-radius: 3px;
    list-style-type: none;
-   overflow: scroll;
+   overflow: auto;
    color: #C7BAB0;
 }
 
@@ -96,10 +110,11 @@
 }
 
 .songData {
+   border: solid black 1px;
    margin-bottom: 1em;
-   /*color: #183B8D;*/
+   color: black;
    font-size: 24px;
-   opacity: 0.9;
+   /*opacity: 0.9;*/
 }
 
 
@@ -115,7 +130,8 @@
    justify-content: center;
    background-color: #EAE0D7;
    border-radius: 5px;
-   border : solid 6px rgba(0,0,0,.1);
+   /*border : solid 6px rgba(0,0,0,.1);*/
+   /*box-shadow: 3px 3px 0 -1px rgba(0,0,0,.2);*/
 }
 
 form {
@@ -159,6 +175,7 @@ input:focus {
 }
 
 #infoSubButton {
+   font-family:'Bungee', sans-serif;
    width: 100%;
    height: 75px;
    margin-bottom: 1em;
@@ -175,7 +192,7 @@ input:focus {
 }
 
 #infoSubButton:hover {
-   color: #31B249;
+   color: #208c64;
    border : solid 6px rgba(0,0,0,.1);
    border-radius: 5px;
    background: transparent;

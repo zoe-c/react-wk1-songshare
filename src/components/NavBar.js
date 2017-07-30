@@ -5,7 +5,8 @@ export default class NavBar extends Component {
   render() {
     return (
       <nav className="navBar">
-         song share
+         <h1 className="navText">song share</h1>
+
       </nav>
     )
   }

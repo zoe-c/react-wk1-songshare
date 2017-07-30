@@ -13,13 +13,13 @@ export default class PlayListItem extends Component {
       return (
         <li key={_id} className="PlayListItem">
             <div className="label">username</div>
-            <div className="songData">{song.username}</div>
+            <div className="songData">{song.userName}</div>
             <div className="label">artist/band</div>
-            <div className="songData">{song.artist}</div>
+            <div className="songData">{song.songArtist}</div>
             <div className="label">title</div>
-            <div className="songData">{song.title}</div>
+            <div className="songData">{song.songTitle}</div>
             <div className="label">notes</div>
-            <div className="songData">{song.notes}</div>
+            <div className="songData">{song.songNotes}</div>
         </li>
       )
     })
