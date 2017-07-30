@@ -55,3 +55,30 @@ export default class PlayList extends Component {
     )
   }
 }
+
+
+// attempt at getting rid/ not rendering empty song cards
+// .then(data => {
+//    let getRidOfEmpties = [];
+//    let notEmpty = data.map((song) => {
+//      if (song.userName && song.songTitle && song.songArtist && song.songNotes) {
+//         //  console.log("username found :", song.userName)
+//         // this.setState({songs: data});
+//         this.state.songs.push(song)
+//      }
+//      else if (song.userName && song.Title && song.Artist && song.Notes) {
+//         let formatSong = {
+//            userName: song.userName,
+//            songTitle: song.Title,
+//            songArtist: song.Artist,
+//            songNotes: song.Notes
+//         }
+//         this.state.songs.push(song)
+//      }
+//      else {
+//         getRidOfEmpties.push(song);
+//      }
+//    })
+//  // console.log(this.state)
+//  // this.setState({songs: data});
+// })

@@ -8,21 +8,31 @@ export default class PlayListItem extends Component {
    constructor(props) {
       super(props);
    }
+
    render() {
-    let listOfSongs = this.props.songs.map((song, _id) => {
-      return (
-        <li key={_id} className="PlayListItem">
-            <div className="label">username</div>
-            <div className="songData">{song.userName}</div>
-            <div className="label">artist/band</div>
-            <div className="songData">{song.songArtist}</div>
-            <div className="label">title</div>
-            <div className="songData">{song.songTitle}</div>
-            <div className="label">notes</div>
-            <div className="songData">{song.songNotes}</div>
-        </li>
-      )
-    })
+// added shallow filter to sub *crickets* for empty submissions.
+// try and get rid of those altogether
+   let listOfSongs = this.props.songs.map((song, _id) => {
+         if (song.Artist || song.songArtist) {
+            return (
+              <li key={_id} className="PlayListItem">
+                  <div className="label">username</div>
+                  <div className="songData">{song.userName}</div>
+                  <div className="label">artist/band</div>
+                  <div className="songData">{song.songArtist || song.Artist}</div>
+                  <div className="label">title</div>
+                  <div className="songData">{song.songTitle || song.Title}</div>
+                  <div className="label">notes</div>
+                  <div className="songData">{song.songNotes || song.Notes}</div>
+              </li>
+            )
+         }
+         else {
+           return (
+             <li key={_id} className= "PlayListItem">* crickets * </li>
+           )
+         }
+   })
     return (
         <ul id="ItemList">
           {listOfSongs}
