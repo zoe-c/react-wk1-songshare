@@ -61,7 +61,7 @@ export default class PlayListForm extends Component {
       <div className= "formContainer">
          <form>
             <div className="fieldsetDivs">
-               <label className= "formLabels" htmlFor="user">user name:</label>
+               <label className= "formLabels" htmlFor="user">user name</label>
                <input  onChange={this.handleName}
                        type="text"
                        className="form-control"
@@ -70,7 +70,7 @@ export default class PlayListForm extends Component {
                        value={this.state.userName}/>
             </div>
             <div className="fieldsetDivs">
-               <label className= "formLabels" htmlFor="artist">artist / band:</label>
+               <label className= "formLabels" htmlFor="artist">artist / band</label>
                <input  onChange={this.handleArtist}
                        type="text"
                        className="form-control"
@@ -79,7 +79,7 @@ export default class PlayListForm extends Component {
                        value={this.state.songArtist}/>
             </div>
             <div className="fieldsetDivs">
-               <label className="formLabels" htmlFor="title">song title:</label>
+               <label className="formLabels" htmlFor="title">song title</label>
                <input  onChange={this.handleTitle}
                        type="text"
                        className="form-control"
@@ -88,7 +88,7 @@ export default class PlayListForm extends Component {
                        value={this.state.songTitle}/>
             </div>
             <div className="fieldsetDivs">
-               <label className="formLabels" htmlFor="notes">notes about song:</label>
+               <label className="formLabels" htmlFor="notes">notes about song</label>
                <input  onChange={this.handleNotes}
                        type="text"
                        className="form-control"
