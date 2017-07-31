@@ -142,12 +142,14 @@
 .emptyEntry {
    font-size: 18px;
    font-family:'Bungee', sans-serif;
-   font-weight: light;
+   font-weight: lighter;
 }
 
 .songData {
    margin-bottom: 1em;
-   color: #00896e;
+   font-size: 14px;
+   /*color: #00896e;*/
+   color: #C7BAB0;
    font-size: 20px;
    font-weight: lighter;
 }
@@ -202,9 +204,10 @@ input {
 }
 
 input:focus {
-    background-color: white;
-    opacity: .7;
-    border-radius: 3px;
+   background-color: white;
+   opacity: .7;
+   border-radius: 3px;
+   border-bottom: solid 3px #4e5b43;
 }
 
 #infoSubButton {
@@ -223,7 +226,6 @@ input:focus {
    -webkit-transform: scale(1.015);
    background-color: #4e5b43;
    color: #00896e;
-   /*opacity: .8;*/
 }
 
 #infoSubButton:active, #updateButton:active {
@@ -232,6 +234,5 @@ input:focus {
    -webkit-transform: translateY(1px);
    box-shadow: 0 .5px 1px #ADABAE;
    border-bottom: none;
-   /*color: #fce837;*/
    border-top: solid 3px #fce837;
 }
