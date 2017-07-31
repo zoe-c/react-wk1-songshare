@@ -16,8 +16,5 @@ button:focus {
   /*vertical-align: baseline;*/
   background: transparent;
   font-family: sans-serif;
+  text-transform: lowercase;
 }
-/*
-html {
-   background-color: #f9f8f2;
-}*/

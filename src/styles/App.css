@@ -7,7 +7,6 @@
    left: 0;
    right: 0;
    font-family: 'Maven Pro', sans-serif;
-   text-transform: lowercase;
 }
 
 @-webkit-keyframes fadeIn {
@@ -24,7 +23,6 @@
     from { line-height: 0; }
     to   { line-height: .6; }
 }
-
 
 .navBar {
    width: 100vw;
@@ -123,17 +121,15 @@
    padding: 1em;
    text-align: center;
    border-radius: 3px;
-   /*border-top: solid 3px white;*/
    background-color: #faf9f4;
-   /*opacity: .85;*/
+   opacity: .9;
    -webkit-animation: slideIn both 1.5s;
    -webkit-animation-delay: .1s;
 }
 
 .PlayListItem:hover {
-   /*opacity: 1;*/
+   opacity: 1;
    background: white;
-   transform: scale(1.05);
 }
 
 .label {
@@ -224,8 +220,6 @@ input:focus {
 }
 
 #infoSubButton:hover, #updateButton:hover {
-   /*background-color: black;
-   color: white;*/
    color: black;
    background: white;
 }
