@@ -70,7 +70,7 @@ export default class PlayListForm extends Component {
                        value={this.state.userName}/>
             </div>
             <div className="fieldsetDivs">
-               <label className= "formLabels" htmlFor="artist">artist/band:</label>
+               <label className= "formLabels" htmlFor="artist">artist / band:</label>
                <input  onChange={this.handleArtist}
                        type="text"
                        className="form-control"

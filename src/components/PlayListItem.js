@@ -18,7 +18,7 @@ export default class PlayListItem extends Component {
               <li key={_id} className="PlayListItem">
                   <div className="label">username</div>
                   <div className="songData">{song.userName}</div>
-                  <div className="label">artist/band</div>
+                  <div className="label">artist / band</div>
                   <div className="songData">{song.songArtist || song.Artist}</div>
                   <div className="label">title</div>
                   <div className="songData">{song.songTitle || song.Title}</div>
@@ -29,7 +29,11 @@ export default class PlayListItem extends Component {
          }
          else {
            return (
-             <li key={_id} className= "PlayListItem">* crickets * </li>
+             <li key={_id} className= "PlayListItem">
+                <div className= "emptyEntry" >
+                  crickets
+                </div>
+                </li>
            )
          }
    })
